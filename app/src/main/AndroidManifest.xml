@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NowPlayingActivity"
+            android:label="@string/now_playing"/>
+        <activity android:name=".SongListActivity"
+            android:label="@string/song_library"/>
+        <activity android:name=".SongDetailActivity"
+            android:label="@string/song_details"></activity>
     </application>
 
 </manifest>

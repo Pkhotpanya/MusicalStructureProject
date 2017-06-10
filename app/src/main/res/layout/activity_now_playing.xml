@@ -11,13 +11,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,11 +20,60 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1">
 
+        <LinearLayout
+            android:id="@+id/linearlayout_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textview_now_playing_navigation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/now_playing" />
+
+            <TextView
+                android:id="@+id/textview_song_details_navigation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/darkTeal"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/song_details" />
+
+            <TextView
+                android:id="@+id/textview_song_library_navigation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/teal"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/song_library" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/linearlayout_navigation"
+            android:text="Explanation" />
+
         <TextView
             android:id="@+id/song_title_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_below="@id/linearlayout_navigation"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:paddingTop="8dp"
             android:text="@string/song_title_here"
             android:textColor="@android:color/black"
@@ -44,6 +86,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/song_title_textview"
             android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:text="@string/album_title_here"
             android:textColor="@android:color/black"
             android:textSize="16sp"
@@ -55,6 +99,8 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/music_timeframe_linearlayout"
             android:layout_below="@id/album_textview"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:src="@drawable/fake_album_cover" />
 
         <LinearLayout
@@ -62,7 +108,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
 
             <Button
                 android:layout_width="0dp"
@@ -89,6 +137,8 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/music_controls_linearlayout"
             android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:paddingTop="8dp" />
 
         <LinearLayout
@@ -98,6 +148,8 @@
             android:layout_above="@id/music_seekbar"
             android:gravity="center"
             android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:paddingTop="8dp">
 
             <TextView

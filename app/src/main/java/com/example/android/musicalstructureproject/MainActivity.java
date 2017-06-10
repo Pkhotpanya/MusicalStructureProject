@@ -4,9 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
 
+        });
+
+        Button explanationBtn = (Button) findViewById(R.id.button_explanation);
+        explanationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "MAIN - \nShowcases your selectable activities.", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

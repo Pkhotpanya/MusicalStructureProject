@@ -5,19 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightAmber"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
     tools:context="com.example.android.musicalstructureproject.SongDetailActivity">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -31,28 +24,71 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <LinearLayout
+                android:id="@+id/linearlayout_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_now_playing_navigation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/now_playing" />
+
+                <TextView
+                    android:id="@+id/textview_song_details_navigation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/darkTeal"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/song_details" />
+
+                <TextView
+                    android:id="@+id/textview_song_library_navigation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/teal"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/song_library" />
+
+            </LinearLayout>
+
             <Button
-                android:id="@+id/play_button"
+                android:id="@+id/button_explanation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:text="@string/play" />
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/linearlayout_navigation"
+                android:text="Explanation" />
 
             <TextView
                 android:id="@+id/detail_song_title_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/play_button"
+                android:layout_below="@id/linearlayout_navigation"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:paddingTop="8dp"
                 android:text="@string/song_title_here"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/textview_album_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/detail_song_title_textview"
-                android:layout_toRightOf="@id/play_button"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:text="@string/album_title_here"
                 android:textStyle="italic" />
 
@@ -60,7 +96,9 @@
                 android:id="@+id/biography_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/play_button"
+                android:layout_below="@id/textview_album_title"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:paddingTop="8dp"
                 android:text="@string/biography"
                 android:textStyle="bold" />
@@ -69,6 +107,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/biography_textview"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:text="@string/biography_body" />
 
         </RelativeLayout>

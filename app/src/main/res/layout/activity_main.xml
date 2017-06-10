@@ -7,7 +7,7 @@
     android:background="@color/lightAmber"
     tools:context="com.example.android.musicalstructureproject.MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -19,6 +19,13 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1">
+
+        <Button
+            android:id="@+id/button_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Explanation" />
 
         <TextView
             android:id="@+id/now_playing_textview"
@@ -33,6 +40,7 @@
             style="@style/CategoryTextView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_below="@id/now_playing_textview"
             android:background="@color/darkTeal"
             android:text="@string/song_details" />
 
@@ -41,9 +49,10 @@
             style="@style/CategoryTextView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_below="@id/song_details_textview"
             android:background="@color/teal"
             android:text="@string/song_library" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
